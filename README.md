@@ -14,12 +14,15 @@ This repository holds the code and plans made for my IoT camera prototype
 
 - execute CMAKE with the following flags:
 From: https://stackoverflow.com/questions/40262928/error-compiling-opencv-fatal-error-stdlib-h-no-such-file-or-directory
+
+```
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/usr/local \
     -D INSTALL_PYTHON_EXAMPLES=ON \
     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.1.0/modules \
     -D ENABLE_PRECOMPILED_HEADERS=OFF \
     -D BUILD_EXAMPLES=ON ..
+```
 
 - Output result after cmake command was executed:
 --   Python 2:
@@ -37,10 +40,13 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 --   Python (for build):            /home/pi/.virtualenvs/cvpy2/bin/python2.7
 
 - Run code:
+```
 cd Smart-Security-Camera-master/
 source ~/.profile
 workon cvpy2
+sudo modprobe bcm2835-v4l2
 python main.py
+```
 
 
 
