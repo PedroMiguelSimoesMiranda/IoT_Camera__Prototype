@@ -1,12 +1,7 @@
- ________________________________________
-|                                        |
-| SECURITY CAMERA OFFICIAL DOCUMENTATION |
-|________________________________________|
-
 # IoT_Camera__Prototype
 This repository holds the code and plans made for my IoT camera prototype
 
-# SOFTWARE USED
+## SOFTWARE USED
 
 - Python 2.7
 
@@ -49,7 +44,7 @@ python main.py
 
 
 
-# Bugs
+## Bugs
 
 - First bug running my code in raspberry pi, this error did not happen in my mac. Error:
 OpenCV Error: Assertion failed (scn == 3 || scn == 4) in cvtColor, file /home/pi/opencv-3.1.0/modules/imgproc/src/color.cpp, line 8000
@@ -62,14 +57,14 @@ Fix:https://stackoverflow.com/questions/35224730/trouble-with-raspberry-pi-and-o
 sudo modprobe bcm2835-v4l2
 
 
-# OTHER SOURCES
+## OTHER SOURCES
 
-# Smart-Security-Camera
+## Smart-Security-Camera
 IoT Raspberry Pi security camera running open-cv for object detection. The camera will send an email with an image of any objects it detects. It also runs a server that provides a live video stream over the internet.
 
 [Watch the original video here](https://youtu.be/Y2QFu-tTvTI)
 
-## Setup
+### Setup
 
 This project uses a Raspberry Pi Camera to stream video. Before running the code, make sure to configure the raspberry pi camera on your device.
 
@@ -88,7 +83,7 @@ raspistill -o image.jpg
 ```
 which will save a image from the camera in your current directory. You can open up the file inspector and view the image.
 
-## Installing Dependencies
+### Installing Dependencies
 
 This project uses openCV to detect objects in the video feed. You can install openCV by using the following [tutorial](http://www.pyimagesearch.com/2016/04/18/install-guide-raspberry-pi-3-raspbian-jessie-opencv-3/). I used the Python 2.7 version of the tutorial.
 
@@ -126,7 +121,7 @@ from email.mime.image import MIMEImage
 print "" => print()
 ```
 
-## Customization
+### Customization
 
 To get emails when objects are detected, you'll need to make a couple modifications to the `mail.py` file.
 
@@ -161,7 +156,7 @@ fullbody_recognition_model.xml
 upperbody_recognition_model.xml
 ```
 
-## Running the Program
+### Running the Program
 
 Run the program
 
